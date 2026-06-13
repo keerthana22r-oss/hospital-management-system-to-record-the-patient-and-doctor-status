@@ -1,0 +1,11 @@
+{% extends "main.html" %}
+{% block content %}
+<h1>PROFILE PAGE</h1>
+
+<h3>WELCOME,{{data.first_name}}{{data.last_name}}</h3>
+<p>Email:{{data.email}}</p>
+<p>Username:{{data.username}}</p><br><br>
+<a href="{% url 'update_profile' %}"><button>Update Profile</button></a><br><br>
+<a href="{% url 'update_password' %}"><button>Update password</button></a>
+
+{% endblock  %}

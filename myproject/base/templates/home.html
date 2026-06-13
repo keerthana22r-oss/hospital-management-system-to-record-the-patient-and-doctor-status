@@ -1,0 +1,49 @@
+{% extends 'main.html' %} 
+{% block content  %} 
+
+ <style>
+    h1{
+        color:blue;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    body{
+        background-image: url('https://static.vecteezy.com/system/resources/previews/047/066/651/non_2x/hospital-isolated-on-transparent-background-png.png');
+        background-repeat: no-repeat;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        background-size: cover;
+        background-position: top center;       
+    }
+    form{
+        background-color: lightblue;
+        width: 400px;
+        padding: 20px;
+        border-radius: 10px;
+    }
+    button{
+        background-color: blue;
+        color: white;
+        border: rgb(13, 13, 82) 2px solid;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+</style> 
+
+    
+    
+    
+</style>
+
+
+<h1>Hello World !...😊</h1> 
+<a href="{% url 'read_hospital' %}"><button>View all details</button></a><br><br>
+<form method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+
+</form>
+{% endblock %}

@@ -1,0 +1,86 @@
+{% extends 'main.html' %}
+{% block content %}
+<style>
+    h2{
+        color:blue;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 30px;
+    }
+
+    
+    table{
+         background-color: lightblue;
+        color: rgb(109, 10, 10);
+    }
+    
+    input{
+        padding: 10px;
+        width: 300px;
+        border-radius: 10px;
+        border-color: rgb(183, 183, 216);
+    }
+    body{
+        background-image: url('https://static.vecteezy.com/system/resources/previews/047/066/651/non_2x/hospital-isolated-on-transparent-background-png.png');
+        background-repeat: no-repeat;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        background-size: cover;
+        background-position: top center;       
+    }
+    button{
+        background-color: rgb(44, 81, 168);
+        color: white;
+        border: rgb(13, 13, 82) 2px solid;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+</style>
+<h2>Patients List</h2>
+<a href="{% url 'home' %}"><button>Add Details</button></a><br><br>
+
+<form action="">
+    <input type="text" name="q" value="{{search | default:''}}" placeholder="search...">
+    <button type="submit">submit</button><br><br>
+</form>
+
+
+
+<table border="1" cellpadding="25" cellspacing="0">
+    <thead>
+        <tr>
+            <th>SI no</th>
+            <th>Name</th>
+            <th>Disease</th>
+            <th>Doctor Assigned</th>
+            <th>Age</th>
+            <th>Room Number</th>
+            <th>Actions</th>
+
+
+           </tr>
+    </thead>
+    <tbody>
+        {%for i in keerthana %}
+        <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.disease}}</td>
+            <td>{{i.doctor_assigned}}</td>
+            <td>{{i.age}}</td>
+            <td>{{i.room_number}}</td>
+            
+
+            <td>
+                <a href="{% url 'update_hospital' i.id %}"><button>Edit</button></a>
+                <a href="{% url 'delete_hospital' i.id%}"><button>Delete</button> </a>
+            </td>
+
+        </tr>
+        {% endfor %}
+
+    </tbody>
+</table>
+
+{% endblock %}
