@@ -45,7 +45,6 @@ This project demonstrates the implementation of full-stack web development conce
 
 * HTML5
 * CSS3
-* Bootstrap
 * JavaScript
 
 ### Database
@@ -132,15 +131,9 @@ http://127.0.0.1:8000/
 ```
 
 ## 📸 Screenshots
+<img width="1910" height="866" alt="image" src="https://github.com/user-attachments/assets/0a91d040-7adf-4263-ad8f-d42f838320a8" />
+<img width="1911" height="867" alt="image" src="https://github.com/user-attachments/assets/e2292e0d-04f0-4dcd-bdb5-9bc49d9a3d55" />
 
-Add screenshots of:
-
-* Home Page
-* Login Page
-* Patient Dashboard
-* Doctor Dashboard
-* Appointment Management
-* Admin Panel
 
 ## 🎯 Learning Outcomes
 
